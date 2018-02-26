@@ -15,6 +15,24 @@ public class WebScraper : MonoBehaviour
     protected object playerIDLock = new object();
     private bool stillRunning = true;
 
+    protected object TransactionTableLock = new object();
+    protected volatile TransactionTable latestEvent = null;
+
+    //returns latestEvent if set. Sets it to null as soon as you grab it.
+    public TransactionTable LatestEvent
+    {
+        get
+        {
+            TransactionTable result = null;
+            lock (TransactionTableLock)
+            {
+                result = latestEvent;
+                latestEvent = null;
+            }
+            return result;
+        }
+    }
+
     public void OnApplicationQuit()
     {
         stillRunning = false;
@@ -49,13 +67,14 @@ public class WebScraper : MonoBehaviour
             identity = id;
         }
 
-        string htmlCode = client.DownloadString(string.Format(mpStats, playerName, identity));
+        string htmlCode = client.DownloadString(string.Format(mpStats, name, identity));
         string[] lines = htmlCode.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
         return lines;
     }
 
     void RunScraper()
     {
+        TransactionTable data = new TransactionTable();
         while (stillRunning)
         {
             string[] lines = Scrape();
@@ -65,20 +84,25 @@ public class WebScraper : MonoBehaviour
                 string line2 = line.Trim();
                 if (line2.StartsWith("<div class = 'user_stats_table_box'>"))
                 {
-                    ParseLine(line2);
+                    if (ParseLine(line2, data)) //new result!
+                    {                       
+                        lock (TransactionTableLock)
+                        {
+                            latestEvent = new TransactionTable(data); //make a copy of the data.                            
+                        }
+                    }
                 }
             }
         }
     }
 
     string previousLine = null;
-    
-    void ParseLine(string s)
+
+    protected bool ParseLine(string s, TransactionTable data)
     {
         if (s != previousLine)
         {
             previousLine = s;
-            Debug.Log(System.DateTime.Now);
             //pull out all transactions...
             int startTransaction = 0;
             int endTransaction;
@@ -97,67 +121,17 @@ public class WebScraper : MonoBehaviour
             List<Transaction> transactions = new List<Transaction>();
             foreach (string transactionString in transactionStrings)
             {
-                Transaction t = ProcessTransaction(transactionString);
+                Transaction t = Transaction.ProcessTransaction(transactionString);
                 if (t != null)
                 {
                     transactions.Add(t);
                 }
             }
 
-            foreach (Transaction t in transactions)
-            {
-                Debug.Log(t);
-            }
-
+            data.UpdateTransactionTable(transactions);
+            return true;
         }
+        return false;
     }
 
-    public class Transaction
-    {
-        string name;
-        string value;
-        public Transaction(string name, string value)
-        {
-            this.name = name;
-            this.value = value;
-        }
-
-        public override string ToString()
-        {
-            return name + ":" + value;
-        }
-    }
-
-    public class TransactionTable
-    {
-        public TransactionTable(List<string> originalData)
-        {
-
-        }
-    }
-
-    Transaction ProcessTransaction(string s)
-    {
-        int startName = s.IndexOf("<th>") + "<th>".Length;
-        int endName = s.IndexOf("</th>", startName);
-        string name = s.Substring(startName, endName - startName);
-
-        int startValue = s.IndexOf("<td>") + "<td>".Length;
-        int endValue = s.IndexOf("</td>", startValue);
-        string value = s.Substring(startValue, endValue - startValue);
-
-        if (name.Length > 0 && value.Length > 0)
-        {
-            return new Transaction(name, value);
-        } else
-        {
-            return null;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
