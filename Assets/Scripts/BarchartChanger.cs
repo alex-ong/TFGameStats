@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class BarchartChanger : MonoBehaviour {
+public class BarchartChanger : MonoBehaviour
+{
     public RectTransform bar;
     public Text t;
     public float maxHeight = 100f;
@@ -9,16 +10,20 @@ public class BarchartChanger : MonoBehaviour {
 
     public void SetNumber(int number, float perc)
     {
-        Rect r = bar.rect;
-        r.height = perc * maxHeight;
+        perc = Mathf.Clamp(perc, 0.01f, 1.0f);
+        Vector2 size = bar.sizeDelta;
+        size.y = perc * maxHeight;
+        bar.sizeDelta = size;
         t.text = number.ToString();
         currentValue = number;
     }
 
     public void SetNumber(float number, float perc)
     {
-        Rect r = bar.rect;
-        r.height = perc * maxHeight;
+        perc = Mathf.Clamp(perc, 0.01f, 1.0f);
+        Vector2 size = bar.sizeDelta;
+        size.y = perc * maxHeight;
+        bar.sizeDelta = size;
         t.text = number.ToString("0.00");
         currentValue = number;
     }

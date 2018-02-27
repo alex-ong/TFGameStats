@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
+
 public class Transaction
 {
     public string name;
@@ -40,17 +42,24 @@ public class Transaction
 public class TransactionTable
 {
     Dictionary<string, string> baseValues = new Dictionary<string, string>();
+
+    public BarchartMaster.RawBarchartInfo toRawBarChartInfo()
+    {
+        return new BarchartMaster.RawBarchartInfo(Tetrises, TSpins, BackToBacks, TotalTetriminos, 
+                                                    LinesSent, PerfectClears, timeSeconds);
+    }
+
     Dictionary<string, int> diffValues = new Dictionary<string, int>();
 
     public int GamesPlayed { get { return diffValues["Games Played"]; } }
-    public int timeSeconds { get { return diffValues["TimeDiffSeconds"]; } } //        Total Time
+    public int timeSeconds { get { return diffValues["Total Time"]; } } //        Total Time
     public int LinesSent { get { return diffValues["Total Lines Sent"]; } }
     public int TotalTetriminos { get { return diffValues["Total Tetriminos"]; } }
     public int Singles { get { return diffValues["Total Singles"]; } }
     public int Doubles { get { return diffValues["Total Doubles"]; } }
     public int Triples { get { return diffValues["Total Triples"]; } }
     public int Tetrises { get { return diffValues["Total Tetrises"]; } }
-    public int TSpins { get { return diffValues["Total T-Spins(All T-Spins)"]; } }
+    public int TSpins { get { return diffValues["Total T-Spins (All T-Spins)"]; } }
     public int BackToBacks { get { return diffValues["Total Back-to-Backs"]; } }
     public int PerfectClears { get { return diffValues["Perfect Clears"]; } }
 
@@ -74,7 +83,9 @@ public class TransactionTable
             {          
                 if (t.name == "Total Time") //special case in format hhhh:mm:ss
                 {
+                    Debug.Log(string.Format("totalTime {0}, {1}", t.value, baseValues[t.name]));
                     diffValues[t.name] = parseTime(t.value) - parseTime(baseValues[t.name]);
+                    Debug.Log("diffSeconds" + diffValues[t.name].ToString());
                     baseValues[t.name] = t.value;
                 }
                 else
@@ -100,7 +111,7 @@ public class TransactionTable
         string[] segments = time.Split(new char[] { ':' });
         //should always be three segments...
         return (int.Parse(segments[0]) * 60 * 60 + //hours
-                int.Parse(segments[1]) + //minutes
+                int.Parse(segments[1]) * 60 + //minutes
                 int.Parse(segments[2]));
     }
 

@@ -10,8 +10,10 @@ public class WebScraper : MonoBehaviour
 {
     public Thread t;
 
+    [SerializeField]
     private string playerName = "XeaL";
-    private string id = "1840665";
+    [SerializeField]
+    private string id = "62080";
     protected object playerIDLock = new object();
     private bool stillRunning = true;
 
@@ -85,7 +87,7 @@ public class WebScraper : MonoBehaviour
                 if (line2.StartsWith("<div class = 'user_stats_table_box'>"))
                 {
                     if (ParseLine(line2, data)) //new result!
-                    {                       
+                    {
                         lock (TransactionTableLock)
                         {
                             latestEvent = new TransactionTable(data); //make a copy of the data.                            

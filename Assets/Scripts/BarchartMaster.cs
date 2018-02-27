@@ -73,8 +73,10 @@ public class BarchartMaster : MonoBehaviour
             BackToBack.SetValues(left.backtoback, right.backtoback);
             if (left.gameSeconds > 0 && right.gameSeconds > 0)
             {
-                PPM.SetValues(left.piecesPlaced / left.gameSeconds, right.piecesPlaced / right.gameSeconds);
-                APM.SetValues(left.linesSent / left.gameSeconds, right.linesSent / right.gameSeconds);
+                PPM.SetValues(Mathf.RoundToInt((float)left.piecesPlaced / left.gameSeconds * 60), 
+                              Mathf.RoundToInt((float)right.piecesPlaced / right.gameSeconds * 60));
+                APM.SetValues(Mathf.RoundToInt((float)left.linesSent / left.gameSeconds * 60),
+                              Mathf.RoundToInt((float)right.linesSent / right.gameSeconds * 60));
                 flashBackground.stop();
             } else
             {
@@ -85,8 +87,10 @@ public class BarchartMaster : MonoBehaviour
         {
             if (left.gameSeconds > 0 && right.gameSeconds > 0)
             {
-                PPM.SetValues(left.piecesPlaced / left.gameSeconds, right.piecesPlaced / right.gameSeconds);
-                APM.SetValues(left.linesSent / left.gameSeconds, right.linesSent / right.gameSeconds);
+                PPM.SetValues(Mathf.RoundToInt((float)left.piecesPlaced / left.gameSeconds * 60),
+                              Mathf.RoundToInt((float)right.piecesPlaced / right.gameSeconds * 60));
+                APM.SetValues(Mathf.RoundToInt((float)left.linesSent / left.gameSeconds * 60),
+                              Mathf.RoundToInt((float)right.linesSent / right.gameSeconds * 60));
                 flashBackground.stop();
             } else
             {
