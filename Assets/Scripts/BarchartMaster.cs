@@ -18,6 +18,7 @@ public class BarchartMaster : MonoBehaviour
     private RawBarchartInfo left;
     private RawBarchartInfo right;
 
+    public FlashBackground flashBackground;
    
     public void UpdatePlayerNames(string left, string right)
     {
@@ -74,6 +75,10 @@ public class BarchartMaster : MonoBehaviour
             {
                 PPM.SetValues(left.piecesPlaced / left.gameSeconds, right.piecesPlaced / right.gameSeconds);
                 APM.SetValues(left.linesSent / left.gameSeconds, right.linesSent / right.gameSeconds);
+                flashBackground.stop();
+            } else
+            {
+                flashBackground.flash();
             }
             PerfectClear.SetValues(left.perfectClear, right.perfectClear);            
         } else
@@ -82,6 +87,10 @@ public class BarchartMaster : MonoBehaviour
             {
                 PPM.SetValues(left.piecesPlaced / left.gameSeconds, right.piecesPlaced / right.gameSeconds);
                 APM.SetValues(left.linesSent / left.gameSeconds, right.linesSent / right.gameSeconds);
+                flashBackground.stop();
+            } else
+            {
+                flashBackground.flash();
             }
         }
     }

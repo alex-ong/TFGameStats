@@ -2446,6 +2446,7 @@ GameObject:
   - component: {fileID: 1245441487}
   - component: {fileID: 1245441489}
   - component: {fileID: 1245441488}
+  - component: {fileID: 1245441490}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -2483,7 +2484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.266}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2504,6 +2505,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245441486}
+--- !u!114 &1245441490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1245441486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693245936aac6464488e0b4f2394133a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1245441488}
+  secondsPerFlash: 0.5
+  flashing: 0
 --- !u!1 &1258476426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,6 +2901,7 @@ MonoBehaviour:
   PerfectClear: {fileID: 2085766153}
   leftPlayerName: {fileID: 684475426}
   rightPlayerName: {fileID: 775897876}
+  flashBackground: {fileID: 1245441490}
 --- !u!1 &1474506056
 GameObject:
   m_ObjectHideFlags: 0
