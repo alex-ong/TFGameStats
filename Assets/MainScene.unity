@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 38978338}
   - component: {fileID: 38978340}
   - component: {fileID: 38978339}
+  - component: {fileID: 38978341}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -182,6 +183,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 38978337}
+--- !u!114 &38978341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38978337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 38978338}
+  t: {fileID: 2133803374}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &58684304
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +454,7 @@ GameObject:
   - component: {fileID: 202688692}
   - component: {fileID: 202688694}
   - component: {fileID: 202688693}
+  - component: {fileID: 202688695}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -497,6 +514,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202688691}
+--- !u!114 &202688695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202688691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 202688692}
+  t: {fileID: 1241474411}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &203654586
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +539,7 @@ GameObject:
   - component: {fileID: 203654587}
   - component: {fileID: 203654589}
   - component: {fileID: 203654588}
+  - component: {fileID: 203654590}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -566,6 +599,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203654586}
+--- !u!114 &203654590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203654586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 203654587}
+  t: {fileID: 1124180116}
+  maxHeight: 50
+  currentValue: 0
 --- !u!1 &220883934
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +704,7 @@ GameObject:
   - component: {fileID: 242145898}
   - component: {fileID: 242145900}
   - component: {fileID: 242145899}
+  - component: {fileID: 242145901}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -715,6 +764,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242145897}
+--- !u!114 &242145901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 242145897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 242145898}
+  t: {fileID: 58684307}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &253769983
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +791,7 @@ GameObject:
   - component: {fileID: 253769987}
   - component: {fileID: 253769986}
   - component: {fileID: 253769985}
+  - component: {fileID: 253769989}
   m_Layer: 5
   m_Name: T-Spin
   m_TagString: Untagged
@@ -821,6 +886,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253769983}
+--- !u!114 &253769989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253769983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 786220230}
+  right: {fileID: 327370971}
+  maxValue: 10
 --- !u!1 &327370967
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +910,7 @@ GameObject:
   - component: {fileID: 327370968}
   - component: {fileID: 327370970}
   - component: {fileID: 327370969}
+  - component: {fileID: 327370971}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -890,6 +970,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 327370967}
+--- !u!114 &327370971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327370967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 327370968}
+  t: {fileID: 1260563810}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &335550195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1175,7 @@ GameObject:
   - component: {fileID: 391858459}
   - component: {fileID: 391858458}
   - component: {fileID: 391858457}
+  - component: {fileID: 391858461}
   m_Layer: 5
   m_Name: Attack/Minute
   m_TagString: Untagged
@@ -1174,6 +1270,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391858455}
+--- !u!114 &391858461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391858455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 1258476430}
+  right: {fileID: 242145901}
+  maxValue: 100
 --- !u!1 &476872190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1336,7 @@ GameObject:
   - component: {fileID: 568384597}
   - component: {fileID: 568384596}
   - component: {fileID: 568384595}
+  - component: {fileID: 568384599}
   m_Layer: 5
   m_Name: Pieces/Minute
   m_TagString: Untagged
@@ -1320,6 +1431,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568384593}
+--- !u!114 &568384599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568384593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 1602496900}
+  right: {fileID: 202688695}
+  maxValue: 160
 --- !u!1 &609765136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1455,7 @@ GameObject:
   - component: {fileID: 609765137}
   - component: {fileID: 609765139}
   - component: {fileID: 609765138}
+  - component: {fileID: 609765140}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -1389,6 +1515,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609765136}
+--- !u!114 &609765140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609765136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 609765137}
+  t: {fileID: 335550198}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &646212657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,6 +1790,7 @@ GameObject:
   - component: {fileID: 786220227}
   - component: {fileID: 786220229}
   - component: {fileID: 786220228}
+  - component: {fileID: 786220230}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -1708,6 +1850,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 786220226}
+--- !u!114 &786220230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786220226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 786220227}
+  t: {fileID: 370463984}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &886680306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1943,7 @@ GameObject:
   - component: {fileID: 956076333}
   - component: {fileID: 956076335}
   - component: {fileID: 956076334}
+  - component: {fileID: 956076336}
   m_Layer: 5
   m_Name: BlueTetris
   m_TagString: Untagged
@@ -1845,6 +2003,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 956076332}
+--- !u!114 &956076336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956076332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 956076333}
+  t: {fileID: 1652727642}
+  maxHeight: 50
+  currentValue: 0
 --- !u!1 &1064381942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2514,7 @@ GameObject:
   - component: {fileID: 1258476427}
   - component: {fileID: 1258476429}
   - component: {fileID: 1258476428}
+  - component: {fileID: 1258476430}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -2400,6 +2574,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1258476426}
+--- !u!114 &1258476430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258476426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 1258476427}
+  t: {fileID: 1064381945}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &1260563807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2688,7 @@ GameObject:
   - component: {fileID: 1285620958}
   - component: {fileID: 1285620960}
   - component: {fileID: 1285620959}
+  - component: {fileID: 1285620961}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -2558,6 +2748,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1285620957}
+--- !u!114 &1285620961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285620957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 1285620958}
+  t: {fileID: 2138984383}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &1317040260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2876,7 @@ GameObject:
   - component: {fileID: 1474506057}
   - component: {fileID: 1474506059}
   - component: {fileID: 1474506058}
+  - component: {fileID: 1474506060}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -2730,6 +2936,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1474506056}
+--- !u!114 &1474506060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1474506056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 1474506057}
+  t: {fileID: 1225248232}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &1553413177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,6 +3029,7 @@ GameObject:
   - component: {fileID: 1602496897}
   - component: {fileID: 1602496899}
   - component: {fileID: 1602496898}
+  - component: {fileID: 1602496900}
   m_Layer: 5
   m_Name: RedTetris
   m_TagString: Untagged
@@ -2867,6 +3089,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1602496896}
+--- !u!114 &1602496900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602496896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c476c64f3baa8d49bb5b1afdad673df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 1602496897}
+  t: {fileID: 120865265}
+  maxHeight: 100
+  currentValue: 0
 --- !u!1 &1639717527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2879,6 +3116,7 @@ GameObject:
   - component: {fileID: 1639717531}
   - component: {fileID: 1639717530}
   - component: {fileID: 1639717529}
+  - component: {fileID: 1639717533}
   m_Layer: 5
   m_Name: BackTo-Back
   m_TagString: Untagged
@@ -2975,6 +3213,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1639717527}
+--- !u!114 &1639717533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639717527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 1474506060}
+  right: {fileID: 38978341}
+  maxValue: 10
 --- !u!1 &1652727639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,6 +3328,7 @@ GameObject:
   - component: {fileID: 1795918329}
   - component: {fileID: 1795918328}
   - component: {fileID: 1795918331}
+  - component: {fileID: 1795918332}
   m_Layer: 5
   m_Name: Tetris
   m_TagString: Untagged
@@ -3170,6 +3423,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1795918332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795918326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 1285620961}
+  right: {fileID: 609765140}
+  maxValue: 10
 --- !u!1 &1830531019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,6 +3556,7 @@ GameObject:
   - component: {fileID: 2085766151}
   - component: {fileID: 2085766150}
   - component: {fileID: 2085766149}
+  - component: {fileID: 2085766153}
   m_Layer: 5
   m_Name: PC
   m_TagString: Untagged
@@ -3383,6 +3651,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085766147}
+--- !u!114 &2085766153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085766147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d930977ede09f434ebfe50977162e52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 203654590}
+  right: {fileID: 956076336}
+  maxValue: 3
 --- !u!1 &2133803371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,7 +3787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85, y: 1}
   m_AnchorMax: {x: 0.85, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000095367}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
   m_SizeDelta: {x: 41.39, y: 20.21}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2138984382
